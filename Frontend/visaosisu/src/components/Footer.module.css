@@ -1,1 +1,24 @@
-
+.footer{
+    background-color: #222;
+    color: white;
+    padding: 3em;
+    text-align: center;
+}
+.list{
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.list li{
+    margin-left: 1em;
+    margin-right: 1em;
+    color: white;
+}
+.list a li:visited{
+    color: white;
+}
+.list li:hover{
+    color: #ffbb33;
+    cursor: pointer;
+}

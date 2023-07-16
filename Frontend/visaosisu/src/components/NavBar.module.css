@@ -1,0 +1,35 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #96AED2;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    height: 10vh;
+}
+.list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+img{
+    height: 8vh;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1vw;
+}
+.links{
+    text-decoration: none;
+}
+.links:hover, .links::selection{
+    text-decoration: underline;
+    color: white;
+}
+.linksAbas{
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}

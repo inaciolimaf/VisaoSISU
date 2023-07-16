@@ -3,13 +3,13 @@ import requests
 
 df = pd.read_excel("ResultadoDia9.xlsx")
 
-preencher_completo = False
-preencher_universidades = True
+preencher_completo = True
+preencher_universidades = False
 
 if preencher_completo:
     for i, line in df.iterrows():
         request = requests.post("http://127.0.0.1:8000/api/v1/sisu/", data={
-            "AnoSISU": "2023.1",
+            "AnoSISU": "2023.2",
             "CodigoSISU": line[0],
             "CodigoIES": line[1],
             "Universidade": line[2],
@@ -58,7 +58,7 @@ if preencher_completo:
 if preencher_universidades:
     universidadesUnicas = list(set(df['Universidade']))
     for i, universide in enumerate(universidadesUnicas):
-        request = requests.post("http://127.0.0.1:8000/api/v1/universidades", data={"AnoSISU": "2023.1", "Universidade": universide})
+        request = requests.post("http://127.0.0.1:8000/api/v1/universidades", data={"AnoSISU": "2023.2", "Universidade": universide})
         if request.status_code != 201:
             print(request.status_code)
             break

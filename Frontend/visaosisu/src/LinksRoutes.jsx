@@ -8,7 +8,7 @@ export default function LinksRoutes() {
   return (
       <Router>
         <NavBar/>
-        <Container customClass="minheight">
+        <Container>
           <Routes>
             <Route exact path="/" element={<Home/>}/>
             <Route exact path="/about" element={<About/>} />

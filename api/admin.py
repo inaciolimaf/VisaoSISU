@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import SISU, SISUUniversidades
+from .models import SISU
 
 
 @admin.register(SISU)
@@ -46,7 +46,3 @@ class SISUAdmin(admin.ModelAdmin):
                     'Nota_Corte_8_Dia',
                     'Diferenca_Corte_8_Para_9_Dia',
                     'Nota_Corte_9_Dia']
-
-@admin.register(SISUUniversidades)
-class UniversidadesAdimin(admin.ModelAdmin):
-     list_display = ['AnoSISU', 'Universidade']

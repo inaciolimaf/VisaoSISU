@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
-from .models import SISU, SISUUniversidades
+from .models import SISU
+
 
 class SISUSerializer(serializers.ModelSerializer):
     class Meta:
@@ -46,7 +47,30 @@ class SISUSerializer(serializers.ModelSerializer):
                   'Nota_Corte_8_Dia',
                   'Diferenca_Corte_8_Para_9_Dia',
                   'Nota_Corte_9_Dia']
-class SISUSerializerUniversidades(serializers.ModelSerializer):
+
+class SISUSerializerUniversidade(serializers.ModelSerializer):
     class Meta:
-        model = SISUUniversidades
-        fields = ['AnoSISU', 'Universidade']
+        model = SISU
+        fields = ['Universidade']
+class SISUSerializerAno(serializers.ModelSerializer):
+    class Meta:
+        model = SISU
+        fields = ['AnoSISU']
+class SISUSerializerCampus(serializers.ModelSerializer):
+    class Meta:
+        model = SISU
+        fields = ['Campus']
+
+class SISUSerializerCursos(serializers.ModelSerializer):
+    class Meta:
+        model = SISU
+        fields = ['Nome_Curso']
+class SISUSerializerGrau(serializers.ModelSerializer):
+    class Meta:
+        model = SISU
+        fields = ['Grau']
+
+class SISUSerializerTurno(serializers.ModelSerializer):
+    class Meta:
+        model = SISU
+        fields = ['Turno']

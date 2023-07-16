@@ -49,13 +49,3 @@ class SISU(models.Model):
         
     def __str__(self):
         return str(self.CodigoSISU)
-class SISUUniversidades(models.Model):
-    AnoSISU = models.CharField(max_length=255)
-    Universidade = models.CharField(max_length=2047)
-      
-    class Meta:
-        verbose_name = 'Universidade'
-        verbose_name_plural = 'Universidades'
-        
-    def __str__(self):
-        return str(self.Universidade)

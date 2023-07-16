@@ -11,8 +11,8 @@
     list-style-type: none;
 }
 .list li{
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 1vw;
+    margin-right: 1vw;
     color: white;
 }
 .list a li:visited{

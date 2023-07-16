@@ -1,0 +1,40 @@
+.home{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+div.home > *{
+    width: 50%;
+    margin-top: 20px;
+}
+div.home h1{
+    font-size: 4vw;
+    font-weight: 300;
+}
+div.home strong{
+    font-weight: 700;
+}
+div.home p{
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+@media (max-width: 500px){
+    div.home > *{
+        width: 90%;
+    }
+    div.home h1{
+        font-size: 6vw;
+    }
+    div.home p{
+        font-size: 4vw;
+    }
+}
+.autoComplete{
+    display: flex;
+    justify-content: center;
+}

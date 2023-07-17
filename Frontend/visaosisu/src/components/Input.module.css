@@ -1,0 +1,18 @@
+.autoComplete {
+    display: flex;
+    justify-content: center;
+}
+
+.Grupo {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.Grupo * {
+    margin-bottom: 7px;
+}
+
+.obrigatorio {
+    font-weight: 700;
+}

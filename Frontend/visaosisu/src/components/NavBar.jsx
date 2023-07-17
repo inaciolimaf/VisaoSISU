@@ -8,10 +8,10 @@ function NavBar(props){
             <Link to="/" className={styles.logo}> <img src={logo} alt="Visão SISU"/></Link>
             <ul className={styles.list}>
                 <li className={styles.linksAbas}>
-                    <Link exact to="/" class={styles.links}>Notas</Link>
+                    <Link exact to="/" className={styles.links}>Notas</Link>
                 </li>
                 <li className={styles.linksAbas}>
-                    <Link exact to="/about"class={styles.links}>Sobre</Link>
+                    <Link exact to="/about"className={styles.links}>Sobre</Link>
                 </li>
             </ul>
         </nav>)

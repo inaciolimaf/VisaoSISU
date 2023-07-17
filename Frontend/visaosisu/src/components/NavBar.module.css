@@ -22,6 +22,8 @@ img{
 }
 .links{
     text-decoration: none;
+    color: black;
+    transition: .1s;
 }
 .links:hover, .links::selection{
     text-decoration: underline;

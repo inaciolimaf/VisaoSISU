@@ -10,7 +10,9 @@
 }
 div.home > *{
     width: 50%;
-    margin-top: 20px;
+}
+div.home > *{
+    margin-top: 10px;
 }
 div.home h1{
     font-size: 4vw;
@@ -23,6 +25,10 @@ div.home p{
     font-size: 1.5vw;
     font-weight: 300;
 }
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+}
 @media (max-width: 500px){
     div.home > *{
         width: 90%;
@@ -34,7 +40,23 @@ div.home p{
         font-size: 4vw;
     }
 }
-.autoComplete{
-    display: flex;
-    justify-content: center;
+#button{
+    background-color: #96AED2;
+    width: 100%;
+    font-weight: 700;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-size: 1.5em;
+    transition: .5s;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 0;
+}
+#button:hover{
+    background-color:#7b8fac;
+}
+@media (min-width:750px) {
+    #button{
+        width: 400px;
+    }
 }

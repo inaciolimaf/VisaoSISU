@@ -17,9 +17,9 @@ export default function Input(props){
                 <Autocomplete
                     disablePortal
                     label="testea"
-                    id="combo-box-demo"
+                    id={props.id}
                     noOptionsText="Nenhum registro encontrado"
-                    options={[]}
+                    options={props.options|| []}
                     sx={{ width: larguraInput}}
                     onChange={props.onChange}
                     renderInput={(params) => <TextField {...params} label={props.Titulo} />}

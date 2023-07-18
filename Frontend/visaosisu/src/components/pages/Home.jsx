@@ -1,17 +1,25 @@
 import styles from "./Home.module.css"
+import { useState, useEffect } from "react"
 import Input from "../Input"
 function Home(){
-    function createPost(){
-        fetch("http://54.89.40.174/api/v1/sisu/",{
-            method: "POST",
-            headers: {
-                "Content-type": "application/json"
-            }
-        }).then((resp)=>{
-            console.log(resp)
-            return resp.json()}).then((data)=> data)
+    const [anos, setAnos] = useState([])
+    function createPost(setFunction, content){
+        useEffect(()=>{
+            fetch("http://54.89.40.174/api/v1/sisu/",{
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.parse(content)
+            }).then((resp)=>resp.json()).then((data)=> {
+                setFunction(data)
+            }).catch((error)=>console.log(error))
+        }, [])
     }
-    console.log(createPost())
+    createPost(setAnos, '{"AnoSISU": "2023.1"}')
+    console.log({
+        "AnoSISU": "2023.1"
+    })
     return (
         <div className={styles.home}>
             <h1>VISUALIZE AS <strong>NOTAS</strong> DE CORTE ANTERIORES DE UMA MANEIRA <strong>FÁCIL</strong></h1>

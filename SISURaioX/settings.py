@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a33cu6$fo+2dw&z31*x3h@ws)x@f11c$r(r=)vaqg^!g)9*ygj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -73,6 +73,7 @@ TEMPLATES = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ['*']
 
 WSGI_APPLICATION = 'SISURaioX.wsgi.application'
 

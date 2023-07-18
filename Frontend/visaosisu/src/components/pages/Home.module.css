@@ -15,14 +15,14 @@ div.home > *{
     margin-top: 10px;
 }
 div.home h1{
-    font-size: 4vw;
+    font-size: 3em;
     font-weight: 300;
 }
 div.home strong{
     font-weight: 700;
 }
 div.home p{
-    font-size: 1.5vw;
+    font-size: 1em;
     font-weight: 300;
 }
 .buttonContainer{

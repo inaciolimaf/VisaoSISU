@@ -4,17 +4,17 @@ import styles from "./Footer.module.css"
 function Footer(props){
     return (<footer className={styles.footer}>
         <ul className={styles.list}>
-            <a href="https://github.com/inaciolimaf/VisaoSISU/tree/main">
+            <a target="_blank" href="https://github.com/inaciolimaf/VisaoSISU/tree/main">
                 <li>
                     <FaGithub/>
                 </li>
             </a>
-            <a href="https://www.instagram.com/inaciosl/">
+            <a target="_blank" href="https://www.instagram.com/inaciosl/">
                 <li>
                     <FaInstagram/>
                 </li>
             </a>
-            <a href="https://www.youtube.com/channel/UC7U9IzmONeXBgjt9TcZCN-A/featured">
+            <a target="_blank" href="https://www.youtube.com/channel/UC7U9IzmONeXBgjt9TcZCN-A/featured">
                 <li>
                     <FaYoutube/>
                 </li>

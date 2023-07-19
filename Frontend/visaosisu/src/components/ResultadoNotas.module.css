@@ -1,0 +1,13 @@
+.resultado{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.resultado * {
+    text-align: justify;
+    margin-bottom: 5px;
+}
+.resultado h2{
+    font-weight: 700;
+    margin-bottom: 10px;
+}

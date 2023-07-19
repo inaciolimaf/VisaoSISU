@@ -21,7 +21,7 @@ div.home h1{
 div.home strong{
     font-weight: 700;
 }
-div.home p{
+div.home > p{
     font-size: 1em;
     font-weight: 300;
 }

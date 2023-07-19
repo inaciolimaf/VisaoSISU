@@ -84,8 +84,8 @@ function Home() {
             <div className={styles.buttonContainer}>
                 <button id={styles.button} onClick={() => {
                     setVisibleRsl(true)
-                    createPost(setResultado, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": curso, "Grau": grau, "Turno": turno })
-                    // createPost(setResultado, {"AnoSISU": "2023.1", Campus: "UNIDADE SEDE", "Grau": "Bacharelado", "Nome_Curso": "ESTATÍSTICA", "Turno": "Matutino", "Universidade": "ESCOLA NACIONAL DE CIÊNCIAS ESTATÍSTICAS"})
+                    // createPost(setResultado, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": curso, "Grau": grau, "Turno": turno })
+                    createPost(setResultado, {"AnoSISU": "2023.1", "Campus": "CAMPUS DA UFC EM CRATEÚS", "Grau": "Bacharelado", "Nome_Curso": "CIÊNCIA DA COMPUTAÇÃO", "Turno": "Integral", "Universidade": "UNIVERSIDADE FEDERAL DO CEARÁ"})
 
                 }}>PESQUISAR</button>
             </div>

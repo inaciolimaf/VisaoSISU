@@ -4,7 +4,14 @@ import Input from "../Input"
 import axios from "axios"
 import * as ReactDOM from 'react-dom/client';
 function Home(){
+    const [turno, setTurno] = useState([])
+    const [turnos, setTurnos] = useState([])
+    const [graus, setGraus] = useState([])
+    const [grau, setGrau] = useState([])
+    const [cursos, setCursos] = useState([])
+    const [curso, setCurso] = useState([])
     const [locais, setLocais] = useState([])
+    const [local, setLocal] = useState([])
     const [instituicoes, setInstituicoes] = useState([]);
     const [Instituicao, setInstituicao] = useState([])
     const [anos, setAnos] = useState([]);
@@ -25,12 +32,10 @@ function Home(){
     }
     function mapOptions(value, key){
         let maps
-        console.log(value)
         if (value.length>0){
             if (typeof value[0][key] == "string") {
                 // Se realmente a requisição da api está válida
                 maps = value.map((inst) => inst[key])
-                console.log(maps)
             }
             else
                 maps = []
@@ -51,10 +56,21 @@ function Home(){
                 setInstituicao(e.target.innerText)
                 createPost(setLocais, {"AnoSISU": ano, "Universidade": e.target.innerText})
             }} />
-            <Input Titulo="Local de oferta" options={mapOptions(locais, "Campus")}/>
-            <Input Titulo="Curso"/>
-            <Input Titulo="Grau"/>
-            <Input Titulo="Turno"/>
+            <Input Titulo="Local de oferta" options={mapOptions(locais, "Campus")} onChange={(e)=>{
+                setLocal(e.target.innerText)
+                createPost(setCursos, {"AnoSISU": ano, "Universidade": Instituicao, "Campus": e.target.innerText})
+            }}/>
+            <Input Titulo="Curso" options={mapOptions(cursos, "Nome_Curso")} onChange={(e)=>{
+                setCurso(e.target.innerText)
+                createPost(setGraus, {"AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": e.target.innerText})
+            }}/>
+            <Input Titulo="Grau" options={mapOptions(graus, "Grau")} onChange={(e)=>{
+                setGrau(e.target.innerText)
+                createPost(setTurnos, {"AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": curso, "Grau": e.target.innerText})
+            }}/>
+            <Input Titulo="Turno" options={mapOptions(turnos, "Turno")} onChange={(e)=>{
+                setTurno(e.target.innerText)
+            }}/>
             <div className={styles.buttonContainer}>
                 <button id={styles.button}>PESQUISAR</button>
             </div>

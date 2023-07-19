@@ -10,7 +10,10 @@
     top: 25px;
 }
 .resultado{
-    margin-top: -20px;
+    margin-top: -5px;
+}
+.notaDia{
+    font-size: 1.3em;
 }
 .nota{
     background-color: white;
@@ -19,4 +22,11 @@
     padding-top: 35px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+}
+.nota > *{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.vagas{
+    margin-top: 10px;
 }

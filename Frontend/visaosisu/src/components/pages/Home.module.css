@@ -29,13 +29,10 @@ div.home p{
     display: flex;
     justify-content: center;
 }
-.logo>img{
-    width: 54px;
-    height: 52px;
-}
 .buttonContainer{
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 @media (max-width: 500px){
     div.home > *{

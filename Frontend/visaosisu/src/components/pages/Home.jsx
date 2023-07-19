@@ -4,6 +4,7 @@ import Input from "../Input"
 import axios from "axios"
 import ResultadoNotas from "../ResultadoNotas"
 import universidadeLogo from "../../../img/universidade.png"
+import capelo from "../../../img/capelo.png"
 function Home() {
     const [visibleResult, setVisibleRsl] = useState(false)
     const [resultado, setResultado] = useState(false)
@@ -66,6 +67,9 @@ function Home() {
                 setLocal(value)
                 createPost(setCursos, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": value })
             }} />
+            <div className={styles.logo}>
+                <img src={capelo} alt="Visão SISU" className={styles.imgLogos}/>
+            </div>
             <Input Titulo="Curso" options={mapOptions(cursos, "Nome_Curso")} onChange={(e, value) => {
                 setCurso(value)
                 createPost(setGraus, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": value })

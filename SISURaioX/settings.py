@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-ROOT_URLCONF = 'SISURaioX.urls'
+ROOT_URLCONF = 'sisuraiox.urls'
 
 TEMPLATES = [
     {
@@ -75,7 +75,7 @@ TEMPLATES = [
 CORS_ORIGIN_ALLOW_ALL = True
 ALLOWED_HOSTS = ['*']
 
-WSGI_APPLICATION = 'SISURaioX.wsgi.application'
+WSGI_APPLICATION = 'sisuraiox.wsgi.application'
 
 
 # Database

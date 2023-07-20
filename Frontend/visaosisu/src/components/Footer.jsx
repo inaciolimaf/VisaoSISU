@@ -3,6 +3,8 @@ import {FaGithub, FaInstagram, FaYoutube} from "react-icons/fa"
 import styles from "./Footer.module.css"
 function Footer(props){
     return (<footer className={styles.footer}>
+        <p>Criado por <strong>Inácio Filho</strong></p>
+        <p>Contatos: </p>
         <ul className={styles.list}>
             <a target="_blank" href="https://github.com/inaciolimaf/VisaoSISU/tree/main">
                 <li>

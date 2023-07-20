@@ -27,7 +27,7 @@ function Home() {
 
 
     async function createPost(setFunction, content) {
-        const response = await axios.post("http://54.89.40.174/api/v1/sisu/", content, {
+        const response = await axios.post("https://visaosisu-api.co/api/v1/sisu/", content, {
             headers: {
                 'Content-Type': 'application/json'
             }

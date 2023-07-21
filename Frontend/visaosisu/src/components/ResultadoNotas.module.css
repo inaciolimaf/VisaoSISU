@@ -11,3 +11,13 @@
     font-weight: 700;
     margin-bottom: 10px;
 }
+table{
+    border-collapse: collapse;
+}
+td , th{
+    border: 1px solid black;
+    padding: 8px;
+}
+th{
+    background-color: #D9D9D9;
+}

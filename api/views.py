@@ -40,6 +40,10 @@ class SISUAPIView(APIView):
         else:
             sisu = SISU.objects.raw('SELECT DISTINCT "api_sisu"."id", "api_sisu"."AnoSISU" FROM "api_sisu" GROUP BY "api_sisu"."AnoSISU"')
             serializer = SISUSerializerAno(sisu, many=True)
+        # Serve para retornar os dados dependendo do que foi recebido
+        # Se não receber retornar o ano
+        # Se receber o ano retorna as instituições
+        # E assim por diante
         return Response(serializer.data)
 
     # Para preencher os dados do banco

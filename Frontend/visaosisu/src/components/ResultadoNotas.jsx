@@ -14,19 +14,46 @@ export default function ResultadoNotas(props){
             <ResultadoCota resultados={resultado}/>
             <div>
                 <h3>Mais informações:</h3>
-                <p>Nota mínima Matemática: {resultado[0]["Minimo_Nota_MT"]}</p>
-                <p>Peso da nota de Matemática: {resultado[0]["Peso_Nota_MT"]}</p>
-                <p>Nota mínima Ciências da Natureza: {resultado[0]["Minimo_Nota_CN"]}</p>
-                <p>Peso da nota de Ciências da Natureza: {resultado[0]["Peso_Nota_CN"]}</p>
-                <p>Nota mínima Ciências Humanas: {resultado[0]["Minimo_Nota_CH"]}</p>
-                <p>Peso da nota de Ciências Humanas: {resultado[0]["Peso_Nota_CH"]}</p>
-                <p>Nota mínima Linguagens: {resultado[0]["Minimo_Nota_L"]}</p>
-                <p>Peso da nota de Linguagens: {resultado[0]["Peso_Nota_L"]}</p>
-                <p>Nota mínima Redação: {resultado[0]["Minimo_Nota_REDACAO"]}</p>
-                <p>Peso da nota de Redação: {resultado[0]["Peso_Nota_REDACAO"]}</p>
-                <p>Media mínima: {resultado[0]["Media_Minima"]}</p>
+                <table>
+                    <thead>
+                        <th>ENEM</th>
+                        <th>PESO</th>
+                        <th>NOTA MÍNIMA</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Redação</td>
+                            <td>{resultado[0]["Peso_Nota_REDACAO"]}</td>
+                            <td>{resultado[0]["Minimo_Nota_REDACAO"]}</td>
+                        </tr>
+                        <tr>
+                            <td>Ciências da Natureza e suas Tecnologias</td>
+                            <td>{resultado[0]["Peso_Nota_CN"]}</td>
+                            <td>{resultado[0]["Minimo_Nota_CN"]}</td>
+                        </tr>
+                        <tr>
+                            <td>Ciências Humanas e suas Tecnologias</td>
+                            <td>{resultado[0]["Peso_Nota_CH"]}</td>
+                            <td>{resultado[0]["Minimo_Nota_CH"]}</td>
+                        </tr>
+                        <tr>
+                            <td>Linguagens, Códigos e suas Tecnologias</td>
+                            <td>{resultado[0]["Peso_Nota_L"]}</td>
+                            <td>{resultado[0]["Minimo_Nota_L"]}</td>
+                        </tr>
+                        <tr>
+                            <td>Matemática e suas Tecnologias</td>
+                            <td>{resultado[0]["Peso_Nota_MT"]}</td>
+                            <td>{resultado[0]["Minimo_Nota_MT"]}</td>
+                        </tr>
+                        <tr>
+                            <td>Média mínima no Enem</td>
+                            <td>-</td>
+                            <td>{resultado[0]["Media_Minima"]}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
-        
+        </div>     
     )
 }   

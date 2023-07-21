@@ -1,6 +1,10 @@
 .sobre{
     margin: 20px;
+    min-height: 86vh;
 }
 p{
     font-size: 1.3em;
+}
+a{
+    text-decoration: none;
 }

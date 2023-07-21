@@ -5,7 +5,7 @@ export default function ResultadoNotas(props){
     let resultado = props.resultados
     return(
         <div className={styles.resultado}>
-            <h2>RESULTADO: </h2>
+            <h2>RESULTADO - {resultado[0]["AnoSISU"].toUpperCase()}: </h2>
             <p><strong>{resultado[0]["Universidade"].toUpperCase()}</strong></p>
             <p>{resultado[0]["Campus"].toUpperCase()}</p>
             <p>{resultado[0]["Nome_Municipio_Campus"].toUpperCase()}</p>

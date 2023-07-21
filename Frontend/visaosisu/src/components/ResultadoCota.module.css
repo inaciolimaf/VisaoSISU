@@ -13,10 +13,10 @@
     margin-top: -5px;
 }
 .notaDia{
-    font-size: 1.3em;
+    font-size: 1em;
 }
 .tituloNota{
-    font-size: 1.3em;
+    font-size: 1em;
 }
 .nota{
     background-color: white;
@@ -32,4 +32,16 @@
 }
 .vagas{
     margin-top: 10px;
+    font-size: 0.9em;
+}
+.bonus{
+    font-size: 0.9em;
+}
+@media (max-width:500px) {
+    .notaDia{
+        font-size: 1.2em;
+    }
+    .tituloNota{
+        font-size: 1.2em;
+    }
 }

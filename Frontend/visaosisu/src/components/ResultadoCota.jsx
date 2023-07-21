@@ -21,10 +21,11 @@ export default function ResultadoCota(props){
                                 )
                             })}
                             <p className={styles.vagas}>QUANTIDADE DE VAGAS: <strong>{resultado.Quant_Vagas_Cota}</strong></p>
-                            <p>BÔNUS: <strong>{resultado.Bonus_Percentual} %</strong></p>
+                            <p className={styles.bonus}>BÔNUS: * <strong>{resultado.Bonus_Percentual} %</strong></p>
                         </p>
                     </div>
                 )})}
+                <p>*: O bônus na nota do ENEM é uma política de cotas que consiste na bonificação adicional percentual de pontos extras à pontuação dos candidatos que se enquadram em critérios específicos.</p>
             </div>
     )
 }

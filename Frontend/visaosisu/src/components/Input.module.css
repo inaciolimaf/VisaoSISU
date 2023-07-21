@@ -8,6 +8,9 @@
     align-items: flex-start;
     flex-direction: column;
 }
+span{
+    font-size: 1.2em;
+}
 
 .Grupo * {
     margin-bottom: 7px;

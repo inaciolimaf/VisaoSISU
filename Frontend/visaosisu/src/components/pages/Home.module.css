@@ -39,10 +39,10 @@ div.home > p{
         width: 90%;
     }
     div.home h1{
-        font-size: 6vw;
+        font-size: 2.5em;
     }
-    div.home p{
-        font-size: 4vw;
+    div.home > p{
+        font-size: 1.5em;
     }
 }
 #button{

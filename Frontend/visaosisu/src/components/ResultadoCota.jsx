@@ -14,7 +14,7 @@ export default function ResultadoCota(props){
                     <div className={styles.resultado} key={index}>
                         <p className={styles.cota}>{resultado.Cota}</p>
                         <p className={styles.nota}>
-                            <strong>NOTAS DE CORTE:</strong>
+                            <strong className={styles.tituloNota}>NOTAS DE CORTE:</strong>
                             {notas.map((nota, index)=>{
                                 return (
                                     <p><span className={styles.notaDia}>{index+1}° DIA: <strong>{nota}</strong></span></p>

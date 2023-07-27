@@ -3,6 +3,9 @@ import ResultadoCota from "./ResultadoCota"
 
 export default function ResultadoNotas(props){
     let resultado = props.resultados
+    if(resultado.length == 0){
+        return (<div>Não foi encontrado nenhum resultado para os parâmetros escolhidos</div>)
+    }
     return(
         <div className={styles.resultado}>
             <h2>RESULTADO - {resultado[0]["AnoSISU"].toUpperCase()}: </h2>

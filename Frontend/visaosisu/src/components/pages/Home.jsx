@@ -84,9 +84,9 @@ function Home() {
             <div className={styles.buttonContainer}>
                 <button id={styles.button} onClick={() => {
                     setVisibleRsl(true)
-                    createPost(setResultado, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": curso, "Grau": grau, "Turno": turno })
+                    // createPost(setResultado, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": curso, "Grau": grau, "Turno": turno })
                     // Para fazer testes sem precisar preencher os dados
-                    // createPost(setResultado, {"AnoSISU": "2023.1", "Campus": "CAMPUS SOBRAL", "Grau": "Licenciatura", "Nome_Curso": "MATEMÁTICA", "Turno": "Matutino", "Universidade": "INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO CEARÁ"})
+                    createPost(setResultado, {"AnoSISU": "2023.1", "Campus": "CAMPUS SOBRAL", "Grau": "Licenciatura", "Nome_Curso": "MATEMÁTICA", "Turno": "Matutino", "Universidade": "INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO CEARÁ"})
 
                 }}>PESQUISAR</button>
             </div>

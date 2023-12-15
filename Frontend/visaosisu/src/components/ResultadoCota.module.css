@@ -1,13 +1,7 @@
-.cota{
-    background-color: #D9D9D9;
-    padding: 1.5em;
-    border-radius: 25px;
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
+.accordionTypography p{
+    margin-left: 10px;
+    margin-bottom: 0px;
     font-weight: 500;
-    position: relative;
-    top: 25px;
 }
 .resultado{
     margin-top: -5px;
@@ -21,8 +15,6 @@
 .nota{
     background-color: white;
     padding: 10px;
-    padding-bottom: 35px;
-    padding-top: 35px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }

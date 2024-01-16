@@ -4,7 +4,7 @@ import ResultadoCota from "./ResultadoCota"
 export default function ResultadoNotas(props){
     let resultado = props.resultados
     if(resultado.length == 0){
-        return (<div>Não foi encontrado nenhum resultado para os parâmetros escolhidos</div>)
+        return (<div>Não foi encontrado nenhum resultado para os parâmetros escolhidos (tente atualizar a página)</div>)
     }
     return(
         <div className={styles.resultado}>

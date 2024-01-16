@@ -32,6 +32,11 @@ export default function ResultadoCota(props){
                                         <p className={styles.nota}>
                                             <strong className={styles.tituloNota}>NOTAS DE CORTE:</strong>
                                             {notas.map((nota, index)=>{
+                                                if (index == notas.length-1){
+                                                    return (
+                                                        <p><span className={styles.notaDia}>{index+1}° DIA: <strong>{nota}</strong><br />(último corte)</span></p>
+                                                    )
+                                                }
                                                 return (
                                                     <p><span className={styles.notaDia}>{index+1}° DIA: <strong>{nota}</strong></span></p>
                                                 )

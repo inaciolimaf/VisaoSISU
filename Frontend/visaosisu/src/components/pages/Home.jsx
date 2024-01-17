@@ -21,6 +21,20 @@ function Home() {
     const [anos, setAnos] = useState([]);
     const [ano, setAno] = useState([]);
 
+    // Para poder resetar
+    const [instituicaoInput, setInstituicaoInput] = useState("");
+    const [localOfertaInput, setLocalOfertaInput] = useState("");
+    const [cursoInput, setCursoInput] = useState("");
+    const [grauInput, setGrauInput] = useState("");
+    const [turnoInput, setTurnoInput] = useState("");
+
+    function zerarInputAPartirDe(posicao){
+        const funcoesSet = [setInstituicaoInput, setLocalOfertaInput, setCursoInput, setGrauInput, setTurnoInput]
+        for (let i = posicao-1; i < funcoesSet.length; i++){
+            funcoesSet[i]("")
+        }
+    }
+
     useEffect(() => {
         createPost(setAnos, {});
     }, []);
@@ -54,32 +68,42 @@ function Home() {
             <p>E COM OS DETALHES PARA CADA PRÉVIA</p>
             <Input Titulo="Edição" options={anos.map((ano) => ano.AnoSISU)} onChange={(e, value) => {
                 setAno(value)
+                zerarInputAPartirDe(1)
                 createPost(setInstituicoes, { "AnoSISU": value });
             }} />
             <div className={styles.logo}>
                 <img src={universidadeLogo} alt="Visão SISU" className={styles.imgLogos}/>
             </div>
-            <Input id="Instituicao" Titulo="Instituição" options={mapOptions(instituicoes, "Universidade")} onChange={(e, value) => {
+            <Input id="Instituicao" value={instituicaoInput} Titulo="Instituição" options={mapOptions(instituicoes, "Universidade")} onChange={(e, value) => {
                 setInstituicao(value)
+                setInstituicaoInput(value)
+                zerarInputAPartirDe(2)
                 createPost(setLocais, { "AnoSISU": ano, "Universidade": value })
             }} />
-            <Input Titulo="Local de oferta" options={mapOptions(locais, "Campus")} onChange={(e, value) => {
+            <Input Titulo="Local de oferta" value={localOfertaInput} options={mapOptions(locais, "Campus")} onChange={(e, value) => {
                 setLocal(value)
+                setLocalOfertaInput(value)
+                zerarInputAPartirDe(3)
                 createPost(setCursos, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": value })
             }} />
             <div className={styles.logo}>
                 <img src={capelo} alt="Visão SISU" className={styles.imgLogos}/>
             </div>
-            <Input Titulo="Curso" options={mapOptions(cursos, "Nome_Curso")} onChange={(e, value) => {
+            <Input Titulo="Curso" value={cursoInput} options={mapOptions(cursos, "Nome_Curso")} onChange={(e, value) => {
                 setCurso(value)
+                zerarInputAPartirDe(4)
+                setCursoInput(value)
                 createPost(setGraus, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": value })
             }} />
-            <Input Titulo="Grau" options={mapOptions(graus, "Grau")} onChange={(e, value) => {
+            <Input Titulo="Grau" value={grauInput} options={mapOptions(graus, "Grau")} onChange={(e, value) => {
                 setGrau(value)
+                setGrauInput(value)
+                zerarInputAPartirDe(5)
                 createPost(setTurnos, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": curso, "Grau": value })
             }} />
-            <Input Titulo="Turno" options={mapOptions(turnos, "Turno")} onChange={(e, value) => {
+            <Input Titulo="Turno" value={turnoInput} options={mapOptions(turnos, "Turno")} onChange={(e, value) => {
                 setTurno(value)
+                setTurnoInput(value)
             }} />
             <div className={styles.buttonContainer}>
                 <button id={styles.button} onClick={() => {

@@ -18,6 +18,7 @@ export default function Input(props){
                     disablePortal
                     label="testea"
                     id={props.id}
+                    value={props.value}
                     noOptionsText="Nenhum registro encontrado"
                     options={props.options|| []}
                     sx={{ width: larguraInput}}

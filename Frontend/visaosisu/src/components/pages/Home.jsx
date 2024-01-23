@@ -41,7 +41,7 @@ function Home() {
 
 
     async function createPost(setFunction, content) {
-        const response = await axios.post("https://127.0.0.1:8000/api/v1/sisu/", content, {
+        const response = await axios.post("http://127.0.0.1:8000/api/v1/sisu/", content, {
             headers: {
                 'Content-Type': 'application/json'
             }

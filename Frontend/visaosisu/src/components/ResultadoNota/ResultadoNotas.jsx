@@ -1,5 +1,5 @@
+import ResultadoCota from "../ResultadoCota/ResultadoCota"
 import styles from "./ResultadoNotas.module.css"
-import ResultadoCota from "./ResultadoCota"
 
 export default function ResultadoNotas(props){
     let resultado = props.resultados

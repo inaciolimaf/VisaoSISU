@@ -1,8 +1,8 @@
 import styles from "./Home.module.css"
 import { useState, useEffect } from "react"
-import Input from "../Input"
+import Input from "../../components/input/Input"
 import axios from "axios"
-import ResultadoNotas from "../ResultadoNotas"
+import ResultadoNotas from "../../components/ResultadoNota/ResultadoNotas"
 import universidadeLogo from "../../../img/universidade.png"
 import capelo from "../../../img/capelo.png"
 function Home() {

@@ -1,9 +1,9 @@
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
-import Home from "./components/pages/Home"
-import About from "./components/pages/About";
-import Container from "./components/layout/Container";
-import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
+import About from "./pages/about/About";
+import Container from "./layout/Container";
+import Footer from "./components/footer/Footer";
+import NavBar from "./components/NavBar/NavBar";
+import Home from "./pages/home/Home";
 export default function LinksRoutes() {
   return (
       <Router>

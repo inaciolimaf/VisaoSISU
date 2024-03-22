@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 
-df = pd.read_excel("ResultadoDia1.xlsx").fillna(0)
+df = pd.read_excel("ResultadoDia4.xlsx").fillna(0)
 for i, lines in df.iterrows():
     data={
         "AnoSISU": "2024.1",
@@ -29,12 +29,12 @@ for i, lines in df.iterrows():
         "Media_Minima": lines[21],
         "Bonus_Percentual": lines[22],
         "Nota_Corte_1_Dia": lines[23],
-        # "Diferenca_Corte_1_Para_2_Dia": lines[24],
-        # "Nota_Corte_2_Dia": lines[25],
-        # "Diferenca_Corte_2_Para_3_Dia": lines[26],
-        # "Nota_Corte_3_Dia": lines[27],
-        # "Diferenca_Corte_3_Para_4_Dia": lines[28],
-        # "Nota_Corte_4_Dia": lines[29],
+        "Diferenca_Corte_1_Para_2_Dia": lines[24],
+        "Nota_Corte_2_Dia": lines[25],
+        "Diferenca_Corte_2_Para_3_Dia": lines[26],
+        "Nota_Corte_3_Dia": lines[27],
+        "Diferenca_Corte_3_Para_4_Dia": lines[28],
+        "Nota_Corte_4_Dia": lines[29],
         # "Diferenca_Corte_4_Para_5_Dia": lines[30],
         # "Nota_Corte_5_Dia": lines[31],
         # "Diferenca_Corte_5_Para_6_Dia": lines[32],

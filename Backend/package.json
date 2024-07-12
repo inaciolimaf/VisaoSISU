@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node build/server.js"
+    "vercel-build": "npx prisma generate && npx prisma migrate deploy" 
   },
   "author": "",
   "license": "ISC",

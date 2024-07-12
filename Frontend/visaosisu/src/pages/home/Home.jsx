@@ -36,16 +36,12 @@ function Home() {
     }
 
     useEffect(() => {
-        createPost(setAnos, {});
+        createPost(setAnos, {}, "anos/");
     }, []);
 
 
-    async function createPost(setFunction, content) {
-        const response = await axios.post("https://visaosisu-api.co/api/v1/sisu/", content, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+    async function createPost(setFunction, content, route) {
+        const response = await axios.post("/notas/"+route, content,);
         setFunction(response.data);
     }
     function mapOptions(value, key) {
@@ -69,7 +65,7 @@ function Home() {
             <Input Titulo="Edição" options={anos.map((ano) => ano.AnoSISU)} onChange={(e, value) => {
                 setAno(value)
                 zerarInputAPartirDe(1)
-                createPost(setInstituicoes, { "AnoSISU": value });
+                createPost(setInstituicoes, { "anoSISU": value }, 'universidades/');
             }} />
             <div className={styles.logo}>
                 <img src={universidadeLogo} alt="Visão SISU" className={styles.imgLogos}/>
@@ -78,13 +74,13 @@ function Home() {
                 setInstituicao(value)
                 setInstituicaoInput(value)
                 zerarInputAPartirDe(2)
-                createPost(setLocais, { "AnoSISU": ano, "Universidade": value })
+                createPost(setLocais, { "anoSISU": ano, "universidade": value }, "campus/")
             }} />
             <Input Titulo="Local de oferta" value={localOfertaInput} options={mapOptions(locais, "Campus")} onChange={(e, value) => {
                 setLocal(value)
                 setLocalOfertaInput(value)
                 zerarInputAPartirDe(3)
-                createPost(setCursos, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": value })
+                createPost(setCursos, { "anoSISU": ano, "universidade": Instituicao, "campus": value }, "cursos/")
             }} />
             <div className={styles.logo}>
                 <img src={capelo} alt="Visão SISU" className={styles.imgLogos}/>
@@ -93,13 +89,13 @@ function Home() {
                 setCurso(value)
                 zerarInputAPartirDe(4)
                 setCursoInput(value)
-                createPost(setGraus, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": value })
+                createPost(setGraus, { "anoSISU": ano, "universidade": Instituicao, "campus": local, "nome_curso": value }, "graus/")
             }} />
             <Input Titulo="Grau" value={grauInput} options={mapOptions(graus, "Grau")} onChange={(e, value) => {
                 setGrau(value)
                 setGrauInput(value)
                 zerarInputAPartirDe(5)
-                createPost(setTurnos, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": curso, "Grau": value })
+                createPost(setTurnos, { "anoSISU": ano, "universidade": Instituicao, "campus": local, "nome_curso": curso, "grau": value }, "turnos/")
             }} />
             <Input Titulo="Turno" value={turnoInput} options={mapOptions(turnos, "Turno")} onChange={(e, value) => {
                 setTurno(value)
@@ -108,9 +104,9 @@ function Home() {
             <div className={styles.buttonContainer}>
                 <button id={styles.button} onClick={() => {
                     setVisibleRsl(true)
-                    createPost(setResultado, { "AnoSISU": ano, "Universidade": Instituicao, "Campus": local, "Nome_Curso": curso, "Grau": grau, "Turno": turno })
+                    createPost(setResultado, { "anoSISU": ano, "universidade": Instituicao, "campus": local, "nome_curso": curso, "grau": grau, "turno": turno }, "completo/")
                     // Para fazer testes sem precisar preencher os dados
-                    // createPost(setResultado, {"AnoSISU": "2023.1", "Campus": "CAMPUS SOBRAL", "Grau": "Licenciatura", "Nome_Curso": "MATEMÁTICA", "Turno": "Matutino", "Universidade": "INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO CEARÁ"})
+                    // createPost(setResultado, {"anoSISU": "2023.1", "campus": "CAMPUS SOBRAL", "grau": "Licenciatura", "nome_curso": "MATEMÁTICA", "turno": "Matutino", "universidade": "INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DO CEARÁ"})
 
                 }}>PESQUISAR</button>
             </div>

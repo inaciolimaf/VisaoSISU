@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+model notaCorte {
+  id                           Int      @id @default(autoincrement())
+  AnoSISU                      String
+  CodigoSISU                   Int
+  CodigoIES                    Int
+  Universidade                 String
+  Nome_Estado                  String
+  Nome_Municipio_Campus        String
+  Campus                       String
+  Nome_Curso                   String
+  Grau                         String
+  Turno                        String
+  Cota                         String
+  Quant_Vagas_Cota             Float
+  Minimo_Nota_CN               Float
+  Peso_Nota_CN                 Float
+  Minimo_Nota_MT               Float
+  Peso_Nota_MT                 Float
+  Minimo_Nota_L                Float
+  Peso_Nota_L                  Float
+  Minimo_Nota_CH               Float
+  Peso_Nota_CH                 Float
+  Minimo_Nota_REDACAO          Float
+  Peso_Nota_REDACAO            Float
+  Media_Minima                 Float
+  Bonus_Percentual             Float
+  Nota_Corte_1_Dia             Float
+  Diferenca_Corte_1_Para_2_Dia Float?
+  Nota_Corte_2_Dia             Float?
+  Diferenca_Corte_2_Para_3_Dia Float?
+  Nota_Corte_3_Dia             Float?
+  Diferenca_Corte_3_Para_4_Dia Float?
+  Nota_Corte_4_Dia             Float?
+  Diferenca_Corte_4_Para_5_Dia Float?
+  Nota_Corte_5_Dia             Float?
+  Diferenca_Corte_5_Para_6_Dia Float?
+  Nota_Corte_6_Dia             Float?
+  Diferenca_Corte_6_Para_7_Dia Float?
+  Nota_Corte_7_Dia             Float?
+  Diferenca_Corte_7_Para_8_Dia Float?
+  Nota_Corte_8_Dia             Float?
+  Diferenca_Corte_8_Para_9_Dia Float?
+  Nota_Corte_9_Dia             Float?
+}

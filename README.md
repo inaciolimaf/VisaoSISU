@@ -1,3 +1,4 @@
+Esse é o primeiro README que foi feito para a primeira versão com Django
 # VisaoSISU
 Um site para mostrar as notas de cortes anteriores do SISU
 ## Acesso

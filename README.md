@@ -1,7 +1,7 @@
 # VisaoSISU
 Um site para mostrar as notas de cortes anteriores do SISU
 ## Acesso
-É possível acessar o site funcionando por [aqui](http://visaosisu.com.br/)
+É possível acessar o site funcionando por [aqui](https://visao-sisu.vercel.app/)
 
 ## Descrição
 ### Front-end
